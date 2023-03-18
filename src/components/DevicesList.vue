@@ -31,8 +31,7 @@ export default {
   data() {
     return {
       serialports,
-      noDevices: false,
-      name: 'HelloWorld'
+      noDevices: false
     }
   },
   methods: {
