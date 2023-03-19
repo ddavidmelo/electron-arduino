@@ -23,7 +23,6 @@ module.exports = defineConfig({
           icon: 'public/icon.icns',
         }
       },
-      
     }
   }
 })

@@ -5,7 +5,7 @@
       <div v-if="noDevices">
         Zero Devices Connected
       </div>
-      <q-item v-for="port in serialports" :key="port.path" class="q-my-sm" clickable v-ripple @click="serialWrite(port)">
+      <q-item v-for="port in serialports" :key="port.path" class="q-my-sm" clickable v-ripple @click="setDevice(port)">
         <q-item-section avatar>
           <q-avatar icon="memory" color="blue" text-color="white" />
         </q-item-section>
@@ -54,7 +54,7 @@ export default {
         }
       })
     },
-    serialWrite(port) {
+    setDevice(port) {
       this.$store.commit('setPort', port);
       this.$router.push({
         name: "device"
